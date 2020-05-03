@@ -1,4 +1,9 @@
-import React, { useEffect } from "react";
+import React, {
+  useEffect,
+  useState,
+  useImperativeHandle,
+  forwardRef,
+} from "react";
 
 import {
   Container,
@@ -12,7 +17,7 @@ import {
 
 import Button from "../../elements/Button";
 
-const Modal = (props) => {
+const Modal = (props, ref) => {
   const {
     textConfirm = "FECHAR PEDIDO",
     textChooseMore = "ESCOLHER MAIS",
@@ -21,16 +26,31 @@ const Modal = (props) => {
     children,
     title,
     footer,
-    show,
+    // show,
     maxHeight,
     FooterHeight,
   } = props;
+
+  const [show, setShow] = useState(true);
+
+  useImperativeHandle(ref, () => ({
+    setShow,
+  }));
 
   useEffect(() => {
     if (show)
       document.querySelector("body").setAttribute("style", "overflow: hidden");
     else document.querySelector("body").removeAttribute("style");
   }, [show]);
+
+  const handleClose = () => {
+    setShow(false);
+    onClose && onClose();
+  };
+
+  const handleConfirm = () => {
+    onConfirm && onConfirm();
+  };
 
   return (
     <Container show={show}>
@@ -39,9 +59,9 @@ const Modal = (props) => {
         onClick={(e) => e.stopPropagation(e)}
         maxHeight={maxHeight}
       >
-        <Header>
+        <Header color="primary">
           <Title>{title}</Title>
-          <Close onClick={onClose} />
+          <Close onClick={handleClose} />
         </Header>
         <Body>{children}</Body>
         <Footer height={FooterHeight}>
@@ -49,14 +69,11 @@ const Modal = (props) => {
             <>
               <Button
                 // border={`2px solid ${theme.primaryColor}`}
-                width={"120px"}
-                onClick={onClose}
+                onClick={handleClose}
               >
                 {textChooseMore}
               </Button>
-              <Button width={"120px"} onClick={onConfirm}>
-                {textConfirm}
-              </Button>
+              <Button nClick={handleConfirm}>{textConfirm}</Button>
             </>
           )}
         </Footer>
@@ -65,4 +82,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal;
+export default forwardRef(Modal);

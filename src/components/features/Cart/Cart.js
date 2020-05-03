@@ -41,59 +41,51 @@ export default function Cart(props) {
   };
 
   return (
-    <Modal
-      onClose={handleClose}
-      show={show}
-      title={"Meu Carrinho"}
-      onConfirm={onConfirm}
-      maxHeight={"80%"}
-    >
-      <Content>
-        {products.map((product, index) => (
-          <CardContainer key={product.id}>
-            <CardHorizontal
-              {...product}
-              quantity={product.quantity}
-              onClick={() => handleInsertItemCart(product)}
-            />
+    <Content>
+      {products.map((product, index) => (
+        <CardContainer key={product.id}>
+          <CardHorizontal
+            {...product}
+            quantity={product.quantity}
+            onClick={() => handleInsertItemCart(product)}
+          />
 
-            <Row>
+          <Row>
+            <Button
+              style={{ marginLeft: 15, color: "#8B8787" }}
+              width="200px"
+              height="35px"
+              backgroundColor={"#FFF"}
+              border={"2px solid #E8E8E8"}
+              action={() => handleRemoveItemCart(product)}
+            >
+              <Row>
+                <h1>Excluir Item</h1>
+                <ImageArrow src={assets.trash} />
+              </Row>
+            </Button>
+
+            <ContainerQuantity>
               <Button
-                style={{ marginLeft: 15, color: "#8B8787" }}
-                width="200px"
-                height="35px"
-                backgroundColor={"#FFF"}
-                border={"2px solid #E8E8E8"}
-                action={() => handleRemoveItemCart(product)}
+                width="40px"
+                height="40px"
+                action={() => decQuantity(product)}
+                disabled={product.quantity === 1}
               >
-                <Row>
-                  <h1>Excluir Item</h1>
-                  <ImageArrow src={assets.trash} />
-                </Row>
+                <ImageArrow src={assets.remove} />
               </Button>
-
-              <ContainerQuantity>
-                <Button
-                  width="40px"
-                  height="40px"
-                  action={() => decQuantity(product)}
-                  disabled={product.quantity === 1}
-                >
-                  <ImageArrow src={assets.remove} />
-                </Button>
-                <Quantity>{product.quantity}</Quantity>
-                <Button
-                  width="40px"
-                  height="40px"
-                  action={() => incQuantity(product)}
-                >
-                  <ImageArrow src={assets.add} />
-                </Button>
-              </ContainerQuantity>
-            </Row>
-          </CardContainer>
-        ))}
-      </Content>
-    </Modal>
+              <Quantity>{product.quantity}</Quantity>
+              <Button
+                width="40px"
+                height="40px"
+                action={() => incQuantity(product)}
+              >
+                <ImageArrow src={assets.add} />
+              </Button>
+            </ContainerQuantity>
+          </Row>
+        </CardContainer>
+      ))}
+    </Content>
   );
 }

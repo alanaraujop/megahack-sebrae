@@ -43,7 +43,7 @@ const Header = styled.div`
   align-items: center;
   min-height: 60px;
   justify-content: center;
-  background-color: ${(props) => props.bgHeader || "#3f51b5"};
+  background-color: ${(props) => props.theme.colors[props.color]};
 `;
 
 export const Title = styled.h2`
