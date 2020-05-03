@@ -1,7 +1,7 @@
 import React from "react";
 import VivaLogo from "../../assets/images/VivaVitrine.png";
 import Icones from "../../assets/images/icones";
-import ClothesProduct from "../../assets/images/clothes";
+import ClothesProduct from "../../mocks/Products";
 
 import {
   Logo,
@@ -12,7 +12,7 @@ import {
   List,
   ClothesCard,
   Clothes,
-} from "./styles";
+} from "./Products.styles";
 
 export default function Products() {
   return (
@@ -30,7 +30,7 @@ export default function Products() {
       <List>
         {ClothesProduct.map((item, index) => (
           <ClothesCard>
-            <Clothes key={index} src={item} alt="Icone do Filtro" />
+            <Clothes key={index} src={item.image} alt="Icone do Filtro" />
           </ClothesCard>
         ))}
       </List>
