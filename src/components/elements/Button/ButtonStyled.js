@@ -38,4 +38,5 @@ export const Button = styled.button`
   align-items: center;
   ${ themeButton }
   ${(props) => props.disabled && Disabled};
+  ${props => props.style}
 `;
