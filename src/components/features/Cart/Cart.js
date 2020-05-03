@@ -64,7 +64,7 @@ export default function Cart(props) {
                 height="35px"
                 backgroundColor={"#FFF"}
                 border={"2px solid #E8E8E8"}
-                onClick={() => handleRemoveItemCart(product)}
+                action={() => handleRemoveItemCart(product)}
               >
                 <Row>
                   <h1>Excluir Item</h1>
@@ -76,7 +76,7 @@ export default function Cart(props) {
                 <Button
                   width="40px"
                   height="40px"
-                  onClick={() => decQuantity(product)}
+                  action={() => decQuantity(product)}
                   disabled={product.quantity === 1}
                 >
                   <ImageArrow src={assets.remove} />
@@ -85,7 +85,7 @@ export default function Cart(props) {
                 <Button
                   width="40px"
                   height="40px"
-                  onClick={() => incQuantity(product)}
+                  action={() => incQuantity(product)}
                 >
                   <ImageArrow src={assets.add} />
                 </Button>

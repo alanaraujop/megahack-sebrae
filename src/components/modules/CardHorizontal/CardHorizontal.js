@@ -16,15 +16,11 @@ export default function CardHorizontal(props) {
   return (
     <CardContainer>
       <Row>
-        <ImageProduct src={image.src} alt="" />
+        <ImageProduct src={image} alt="" />
         <InfoContainer>
           <Description>{description}</Description>
           <Price>
-            R$
-            {formatMoney(
-              parseFloat(price.replace(",", ".")).toFixed(2) *
-                parseInt(quantity)
-            )}
+            {formatMoney(price.toFixed(2) * parseInt(quantity || 1))}
           </Price>
         </InfoContainer>
       </Row>
