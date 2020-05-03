@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-image: url(${bgDefault});
   background-position: top center;
