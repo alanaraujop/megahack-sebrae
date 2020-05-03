@@ -10,11 +10,6 @@ const ViewProducts = styled.section`
     flex-direction: column;
 `;
 
-const Logo = styled.img`
-    width: 208px;
-    height: 89px;
-    margin-top: 20px;
-`;
 
 const Filter = styled.div`
     display: flex;
@@ -63,6 +58,7 @@ const ClothesCard = styled.div`
     -webkit-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
     -moz-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
     box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
+    cursor: pointer;
 `;
 
 const Clothes = styled.img`
@@ -83,4 +79,4 @@ const Description = styled.p`
 `;
 
 
-export { ViewProducts, Logo, Filter, HowToUse, ProdutctIcon, List, ClothesCard, Clothes, Description };
+export { ViewProducts, Filter, HowToUse, ProdutctIcon, List, ClothesCard, Clothes, Description };
