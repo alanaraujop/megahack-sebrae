@@ -33,13 +33,15 @@ const ProdutctIcon = styled.img`
     border-radius: 50%;
     `;
 
-const Description = styled.p`
+const HowToUse = styled.p`
     text-transform: uppercase;
     text-transform: bold;
     text-justify: center;
     text-align: center;
     font-weight: 500;
+    font-size: 18px;
     color: #B5B5B5;
+    width: 600px;
     margin-top: 20px;
 `;
 
@@ -53,14 +55,14 @@ const List = styled.div`
 `;
 
 const ClothesCard = styled.div`
-    height: 200px;
+    height: 260px;
     width: 180px;
     background-color: #fff;
     margin: 10px;
     border-radius: 10px;
-    -webkit-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.8);
-    -moz-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.8);
-    box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.8);
+    -webkit-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
+    -moz-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
+    box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
 `;
 
 const Clothes = styled.img`
@@ -68,8 +70,17 @@ const Clothes = styled.img`
     align-items: center;
     justify-content: center;
     margin: 20px auto 0;
-    height: 80%;
-    width: 80%;
+    height: 50%;
+    width: 50%;
 `;
 
-export { ViewProducts, Logo, Filter, Description ,ProdutctIcon, List, ClothesCard, Clothes };
+const Description = styled.p`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:#B5B5B5;
+    margin-top: 20px;
+`;
+
+
+export { ViewProducts, Logo, Filter, HowToUse, ProdutctIcon, List, ClothesCard, Clothes, Description };
