@@ -31,7 +31,7 @@ export const Button = styled.button`
   border-radius: 20px;
   height: 35px;
   transition: all 0.08s ease-in-out;
-  width: 180px;
+  width: ${props => props.width || '180px'};
   outline: none;
   display: flex;
   justify-content: center;
