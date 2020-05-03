@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import fundo from "../../assets/images/fundo.png";
 
 const ViewProducts = styled.section`
     display: flex;
     align-items: center;
-    background:url(${fundo});
     min-height: 800px;
     width: 100%;
     flex-direction: column;
@@ -15,13 +13,13 @@ const Filter = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 20px 0;
+    margin: 40px 0;
+    cursor: pointer;
 `;
 
 
 const ProdutctIcon = styled.img`
     border: 1px solid #B84471;
-    cursor: pointer;
     margin: 0 2%;
     width: 54px;
     height: 54px;
@@ -46,7 +44,7 @@ const List = styled.div`
     max-width: 800px;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 0;
+    margin: 10px 0;
 `;
 
 const ClothesCard = styled.div`
@@ -58,14 +56,20 @@ const ClothesCard = styled.div`
     -webkit-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
     -moz-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
     box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
+`;
+
+const Like = styled.img`
     cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 0 140px;
 `;
 
 const Clothes = styled.img`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto 0;
+    margin: 10px auto 0;
     height: 50%;
     width: 50%;
 `;
@@ -75,8 +79,8 @@ const Description = styled.p`
     flex-direction: column;
     text-align: center;
     color:#B5B5B5;
-    margin-top: 20px;
+    margin-top: 5px;
 `;
 
 
-export { ViewProducts, Filter, HowToUse, ProdutctIcon, List, ClothesCard, Clothes, Description };
+export { ViewProducts, Filter, HowToUse, ProdutctIcon, List, ClothesCard, Like, Clothes, Description };

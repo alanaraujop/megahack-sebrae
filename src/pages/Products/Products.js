@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "../../components/elements/Logo";
 import Icones from "../../assets/images/icones";
 import ClothesProduct from "../../mocks/Products";
+import Love from "../../assets/images/icones/love.svg";
 
 import {
   ViewProducts,
@@ -10,6 +10,7 @@ import {
   ProdutctIcon,
   List,
   ClothesCard,
+  Like,
   Clothes,
   Description,
 } from "./Products.styles";
@@ -17,7 +18,6 @@ import {
 export default function Products() {
   return (
     <ViewProducts>
-      <Logo />
       <Filter>
         {Icones.map((item, index) => (
           <ProdutctIcon key={index} src={item} alt="Icone do Filtro" />
@@ -30,6 +30,7 @@ export default function Products() {
       <List>
         {ClothesProduct.map((item, index) => (
           <ClothesCard>
+            <Like src={Love} alt="like" />
             <Clothes key={index} src={item.image} alt="Icone do Filtro" />
             <Description>
               <p>{`${item.cod}`}</p>
