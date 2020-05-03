@@ -1,18 +1,17 @@
-
-import React from 'react'
+import React from "react";
 import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
 import storage from "redux-persist/lib/storage";
-import { Provider } from 'react-redux';
+import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
+import Reducers from "./reducers";
 
-const rootReducer = combineReducers({
-});
+const rootReducer = combineReducers(Reducers);
 
 const persistConfig = {
   storage,
-  key: "root"
+  key: "root",
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -28,11 +27,11 @@ const store = createStore(
 let persistor = persistStore(store);
 
 const addReduxProviders = (app) => (
-  <Provider store={ store }>
+  <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       {app}
     </PersistGate>
   </Provider>
-)
+);
 
 export default addReduxProviders;
