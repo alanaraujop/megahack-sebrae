@@ -11,7 +11,6 @@ const incrementItemCart = (id) => async (dispatch) => {
     type: TYPES.INCREMENT_ITEM_CART,
     payload: id,
   });
-  return;
 };
 
 const decrementItemCart = (id) => async (dispatch) => {
@@ -19,7 +18,6 @@ const decrementItemCart = (id) => async (dispatch) => {
     type: TYPES.DECREMENT_ITEM_CART,
     payload: id,
   });
-  return;
 };
 
 const insertItemCart = (item) => async (dispatch, getState) => {
