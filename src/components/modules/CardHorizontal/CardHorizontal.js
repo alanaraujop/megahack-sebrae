@@ -8,25 +8,30 @@ import {
   Price,
   Row,
   ButtonDelete,
-} from "./styles";
+} from "./CardHorizontal.styles";
 import { formatMoney } from "../../../helpers";
+import SelectSize from "../../elements/SelectSize";
 
 export default function CardHorizontal(props) {
-  const { price = 0, quantity = 0, description, image = {}, onDelete } = props;
+  const { onRemove, product, setSize } = props;
+
+  const { price, quantity = 1, description, image, size } = product;
+
   return (
     <CardContainer>
-      <Row>
-        <ImageProduct src={image} alt="" />
-        <InfoContainer>
+      <ImageProduct src={image} alt="" />
+      <InfoContainer>
+        <Row>
           <Description>{description}</Description>
+          <ButtonDelete onClick={onRemove} />
+        </Row>
+        <Row>
+          <SelectSize size={size} setSelect={setSize} />
           <Price>
             {formatMoney(price.toFixed(2) * parseInt(quantity || 1))}
           </Price>
-        </InfoContainer>
-      </Row>
-      <Row>
-        {!!onDelete && <ButtonDelete onClick={onDelete}>Excluir</ButtonDelete>}
-      </Row>
+        </Row>
+      </InfoContainer>
     </CardContainer>
   );
 }

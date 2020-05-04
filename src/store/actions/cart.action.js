@@ -4,6 +4,7 @@ export const TYPES = {
   CLEAR_CART: "CLEAR_CART",
   INCREMENT_ITEM_CART: "INCREMENT_ITEM_CART",
   DECREMENT_ITEM_CART: "DECREMENT_ITEM_CART",
+  SET_SIZE_ITEM_CART: "SET_SIZE_ITEM_CART",
 };
 
 const incrementItemCart = (id) => async (dispatch) => {
@@ -43,10 +44,15 @@ const clearCart = () => (dispatch) => {
   dispatch({ type: TYPES.CLEAR_CART });
 };
 
+const setSizeItemCart = ({ id, size }) => (dispatch) => {
+  dispatch({ type: TYPES.SET_SIZE_ITEM_CART, payload: { size, id } });
+};
+
 export default {
   incrementItemCart,
   decrementItemCart,
   insertItemCart,
   removeItemCart,
   clearCart,
+  setSizeItemCart,
 };

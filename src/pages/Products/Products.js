@@ -4,7 +4,6 @@ import ClothesProduct from "../../mocks/Products";
 import Love from "../../assets/images/icones/love.svg";
 
 import {
-  ViewProducts,
   Filter,
   HowToUse,
   ProdutctIcon,
@@ -17,9 +16,9 @@ import {
 
 export default function Products() {
   return (
-    <ViewProducts>
+    <>
       <Filter>
-        {Icones.map((item, index) => (
+        {Icones.categorias.map((item, index) => (
           <ProdutctIcon key={index} src={item} alt="Icone do Filtro" />
         ))}
       </Filter>
@@ -40,6 +39,6 @@ export default function Products() {
           </ClothesCard>
         ))}
       </List>
-    </ViewProducts>
+    </>
   );
 }
