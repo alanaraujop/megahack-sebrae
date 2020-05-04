@@ -1,10 +1,18 @@
 import styled from "styled-components";
 
+const breakpoint = "max-width: 768px";
+
 const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   margin-top: 100px;
+
+  @media(${breakpoint}) {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 20px;
+  }
 `;
 
 const ClothesContainer = styled.div`
@@ -18,6 +26,13 @@ const ClothesContainer = styled.div`
 const ClothesList = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media(${breakpoint}) {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    max-width: 100vw;
+    margin: 5px 5px 20px;
+  }
 `;
 
 const ImageClothe = styled.img`
