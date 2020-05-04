@@ -20,4 +20,4 @@ const ControlImage = styled.img`
   transform: ${(props) => (props.invert ? "rotateY(190deg)" : "none")};
 `;
 
-export default { ButtonControl, ControlImage };
+export { ButtonControl, ControlImage };

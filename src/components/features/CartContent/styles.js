@@ -31,7 +31,6 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #e8e8e8;
 `;
 
 const Row = styled.div`

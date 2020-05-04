@@ -17,7 +17,6 @@ const Filter = styled.div`
     cursor: pointer;
 `;
 
-
 const ProdutctIcon = styled.img`
     border: 1px solid #B84471;
     margin: 0 2%;

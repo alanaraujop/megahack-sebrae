@@ -24,6 +24,12 @@ const CartReducer = (state = INITIAL_STATE, action) => {
     case TYPES.REMOVE_ITEM_CART:
       return state.filter((item) => item.id !== action.payload);
 
+    case TYPES.SET_SIZE_ITEM_CART:
+      return state.map((item) =>
+        item.id === action.payload.id
+          ? { ...item, size: action.payload.size }
+          : item
+      );
     case TYPES.CLEAR_CART:
       return [];
 
