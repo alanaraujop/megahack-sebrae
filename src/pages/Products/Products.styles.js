@@ -4,6 +4,7 @@ const ViewProducts = styled.section`
     display: flex;
     align-items: center;
     min-height: 800px;
+    padding: 0 20px;
     width: 100%;
     flex-direction: column;
 `;
@@ -13,7 +14,7 @@ const Filter = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 40px 0;
+    margin: 40px 0 20px;
     cursor: pointer;
 `;
 
@@ -33,7 +34,8 @@ const HowToUse = styled.p`
     font-weight: 500;
     font-size: 18px;
     color: #B5B5B5;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     margin-top: 20px;
 `;
 
@@ -52,9 +54,7 @@ const ClothesCard = styled.div`
     background-color: #fff;
     margin: 10px;
     border-radius: 10px;
-    -webkit-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
-    -moz-box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
-    box-shadow: 4px 4px 20px 2px rgba(144, 137, 130, 0.5);
+    box-shadow: ${props => props.theme.shadows[0]}
 `;
 
 const Like = styled.img`
@@ -70,7 +70,6 @@ const Clothes = styled.img`
     justify-content: center;
     margin: 10px auto 0;
     height: 50%;
-    width: 50%;
 `;
 
 const Description = styled.p`
