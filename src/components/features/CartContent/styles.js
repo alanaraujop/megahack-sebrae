@@ -35,6 +35,9 @@ const Total = styled.p`
   font: 25px Poppins;
   letter-spacing: 3px;
   color: #707070;
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
 `;
 const MoreItems = styled.p`
   margin-top: 20px;
@@ -42,6 +45,9 @@ const MoreItems = styled.p`
   letter-spacing: 2.4px;
   color: #9e003d;
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 export {

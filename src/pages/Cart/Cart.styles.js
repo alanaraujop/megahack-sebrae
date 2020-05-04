@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Description = styled.h2`
-  margin: 52px auto;
+  margin: 30px auto;
   max-width: 698px;
   text-align: center;
   font: 23px Poppins;

@@ -24,4 +24,10 @@ export const Size = styled.div`
       background-color: #b5b5b5;
       color: #fff;
     `}
+  @media(max-width: 768px) {
+    width: 18px;
+    height: 19px;
+    margin-right: 8px;
+    font-size: 9px;
+  }
 `;

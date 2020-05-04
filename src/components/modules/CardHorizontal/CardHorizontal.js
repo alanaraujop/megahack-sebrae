@@ -8,7 +8,7 @@ import {
   Price,
   Row,
   ButtonDelete,
-} from "./styles";
+} from "./CardHorizontal.styles";
 import { formatMoney } from "../../../helpers";
 import SelectSize from "../../elements/SelectSize";
 

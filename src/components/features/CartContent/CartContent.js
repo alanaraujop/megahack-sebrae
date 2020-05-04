@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import CardHorizontal from "../../modules/CardHorizontal";
@@ -7,7 +7,8 @@ import { formatMoney } from "../../../helpers";
 import { Button } from "../../elements";
 import { Content, CardContainer, Total, Row, MoreItems } from "./styles";
 import { useHistory } from "react-router-dom";
-
+import Products from "../../../mocks/Products";
+import { useMedia } from "../../../hooks/useMedia";
 const generateProductsList = (cart) =>
   cart.reduce(
     (acum, item, index) => `${acum}
@@ -20,9 +21,15 @@ export default function CartContent() {
   const cart = useSelector((state) => state.cart);
   const history = useHistory();
 
+  const { isSmall } = useMedia();
+
   const whatsappNumber = "5521984623153";
   const text = `*PRODUTOS:*%0a
   -----------------%0a${generateProductsList(cart)}`;
+  useEffect(() => {
+    dispatch(ActionsCart.insertItemCart(Products[0]));
+    dispatch(ActionsCart.insertItemCart(Products[1]));
+  }, []);
 
   const handleRemoveItemCart = (id) => {
     dispatch(ActionsCart.removeItemCart(id));
@@ -68,11 +75,11 @@ export default function CartContent() {
             action={closeOrder}
             style={{
               margin: "20px 0",
-              height: "83px",
+              height: !isSmall ? "83px" : "47px",
               maxWidth: "396px",
-              width: "100%",
+              width: "80%",
               borderRadius: "42px",
-              fontSize: "25px",
+              fontSize: !isSmall ? "25px" : "13px",
             }}
           >
             FECHAR PEDIDO

@@ -1,12 +1,11 @@
-import React from 'react';
-import * as S from './HeaderStyled';
-import VivaLogo from '../../../assets/images/VivaVitrine.png'
-import { Image } from '../../elements';
+import React from "react";
+import * as S from "./HeaderStyled";
+import VivaLogo from "../../../assets/images/VivaVitrine.png";
 
 const Header = () => (
   <S.Header>
-    <Image src={VivaLogo} width={208} height={89} alt="BrandLogo"/>
+    <S.Logo src={VivaLogo} alt="BrandLogo" />
   </S.Header>
 );
 
-export default Header
+export default Header;
