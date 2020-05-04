@@ -1,3 +1,4 @@
 import ActionsCart from "./cart.action";
+import ActionsProfile from "./profile.action";
 
-export { ActionsCart };
+export { ActionsCart, ActionsProfile };
