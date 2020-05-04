@@ -22,18 +22,12 @@ const decrementItemCart = (id) => async (dispatch) => {
 };
 
 const insertItemCart = (item) => async (dispatch, getState) => {
-  const cart = await getState().cart;
-
-  if (cart.find((_item) => item.id === _item.id)) {
-    dispatch(incrementItemCart(item));
-    return;
-  }
 
   dispatch({
     type: TYPES.INSERT_ITEM_CART,
     payload: item,
   });
-  return;
+
 };
 
 const removeItemCart = (id) => (dispatch) => {

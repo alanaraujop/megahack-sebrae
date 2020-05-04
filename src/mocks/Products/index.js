@@ -17,6 +17,7 @@ const Products = [
       image: BermudaOne,
       name: "Bermuda Branca",
       description: "Bermuda Branca btn Black",
+      category: "Partes de Baixo",
       price: 25.00,
       cod: "13123",
       profiles: [2, 3, 5] 
@@ -26,6 +27,7 @@ const Products = [
         image: BermudaTwo,
         name: "Bermuda Xadrez",
         description: "Bermuda Xadrez Azul",
+        category: "Partes de Baixo",
         price: 35.00,
         cod: "13124",
         profiles: [2, 3, 5]
@@ -35,6 +37,7 @@ const Products = [
         image: BlusaoOne,
         name: "Vestido blue White",
         description: "Vestido Azul com bolinha branca",
+        category: "Vestido",
         price: 69.90,
         cod: "14121",
         profiles: [2, 3, 5]  
@@ -44,6 +47,7 @@ const Products = [
         image: CalcaoOne,
         name: "Calça Preta Social",
         description: "Calça Preta Social colection 2020",
+        category: "Partes de Baixo",
         price: 89.90,
         cod: "15121",
         profiles: [2, 3, 5] 
@@ -53,6 +57,7 @@ const Products = [
         image: CalcaoTwo,
         name: "Calça Jeans Strech",
         description: "Calça Jeans Strech Blue White",
+        category: "Partes de Baixo",
         price: 89.90,
         cod: "15122",
         profiles: [2, 3, 5]  
@@ -62,6 +67,7 @@ const Products = [
         image: CalcaoFor,
         name: "Calça Rosa Mod",
         description: "Calça Rosa Mod Colection 2020",
+        category: "Partes de Baixo",
         price: 89.90,
         cod: "15123",
         profiles: [2, 3, 5]  
@@ -71,6 +77,7 @@ const Products = [
         image: CamisaOne,
         name: "Camisa Social Azul",
         description: "Camisa Social Azul Marinho",
+        category: "Camisa",
         price: 89.90,
         cod: "16121",
         profiles: [2, 3, 5]  
@@ -80,6 +87,7 @@ const Products = [
         image: CamisaTwo,
         name: "Camisa Branca Estampada",
         description: "Camisa Branca com estampa Color",
+        category: "Camisa",
         price: 30.90,
         cod: "16122",
         profiles: [2, 3, 5]  
@@ -89,6 +97,7 @@ const Products = [
         image: CamisaFive,
         name: "Camisa Show mere",
         description: "Camisa Show mere 2019",
+        category: "Camisa",
         price: 29.90,
         cod: "16123",
         profiles: [2, 3, 5]  
@@ -98,6 +107,7 @@ const Products = [
         image: CamisaSix,
         name: "Camisa Color Brega",
         description: "Camisa Color Brega Standart",
+        category: "Camisa",
         price: 89.90,
         cod: "16127",
         profiles: [2, 3, 5]  
@@ -107,6 +117,7 @@ const Products = [
         image: SaiaOne,
         name: "Saia Preta c/ Fenda",
         description: "Saia Preta c/ Fenda mod",
+        category: "Partes de Baixo",
         price: 89.90,
         cod: "19121",
         profiles: [2, 3, 5]  
@@ -116,6 +127,7 @@ const Products = [
         image: SaiaTwo,
         name: "Saia Preta Corr",
         description: "Saia Preta Corr - lançamento 2020",
+        category: "Partes de Baixo",
         price: 89.90,
         cod: "19122",
         profiles: [2, 3, 5]  
