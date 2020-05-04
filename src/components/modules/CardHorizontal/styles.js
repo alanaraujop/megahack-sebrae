@@ -1,78 +1,66 @@
 import styled from "styled-components";
+import icones from "../../../assets/images/icones";
 
 const CardContainer = styled.div`
   display: flex;
-  /* align-items: center; */
-  max-width: 400px;
-  flex-direction: column;
-  margin: auto;
+  max-width: 800px;
+  position: relative;
+  margin: 14px auto;
+  padding: 7px 57px;
   width: 100%;
+  height: 190px;
   flex: 1;
+  box-sizing: border-box;
+  box-shadow: ${(props) => props.theme.shadows[0]};
   justify-content: center;
-  :not(:first-child) {
+  background-color: #fff;
+  /* :not(:first-child) {
     border-top: solid #e8e8e8 2px;
     margin-top: 20px;
-  }
+  } */
 `;
 
 const Row = styled.div`
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
 `;
 
-const ButtonDelete = styled.button`
-  flex: 1;
-  height: 30px;
-  background-color: #fff;
-  border: solid #e8e8e8 2px;
+const ButtonDelete = styled.img.attrs({ src: icones.lixeira })`
+  height: 18px;
   color: #9e9e9e;
-  border-radius: 4px;
+  cursor: pointer;
 `;
 
 const InfoContainer = styled.div`
   display: flex;
+  flex: 1 1;
   align-items: flex-start;
-  flex: 2;
-  margin: 8px;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
+  margin: 25px;
 `;
 
-const ImageProduct = styled.div`
-  flex: 1;
-  background-image: url(${(props) => props.src});
-  background-position: center;
-  background-size: contain;
+const ImageProduct = styled.img`
   margin: 5px;
-  background-repeat: no-repeat;
-  height: 25vw;
-  max-height: 100px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.11);
-  border-radius: 2px;
+  height: 100%;
+  object-fit: contain;
 `;
 
 const Description = styled.p`
-  margin: 20px 0 10px;
-  text-align: flex-start;
-  /* font-family: unset; */
-  font-family: Roboto;
-
-  font-style: normal;
-  font-weight: 480;
-  font-size: 12px;
-  line-height: 15px;
-  height: 45px;
+  text-align: center;
+  font: SemiBold 20px/30px Poppins;
+  letter-spacing: 2.4px;
+  color: #b5b5b5;
+  text-transform: uppercase;
 `;
 
 const Price = styled.p`
-  text-align: flex-start;
-  /* font-family: unset; */
-  font-family: Roboto;
-
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 20px;
+  text-align: center;
+  font: Light 20px/30px Poppins;
+  letter-spacing: 2.4px;
+  color: #b5b5b5;
 `;
 
 export {
