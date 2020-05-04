@@ -7,11 +7,13 @@ import {
   ImageClothe,
   BodyContainer,
   Body,
+  ButtonMore,
 } from "./Fitting.styles";
 import { useSelector } from "react-redux";
 import Typography from "../../components/elements/Typography/Typography";
 import { Card } from "../../components/elements";
 import body from "../../assets/images/Sombra.svg";
+import { Link } from "react-router-dom";
 
 export default function Fitting() {
   const cart = useSelector((state) => state.cart);
@@ -48,8 +50,15 @@ export default function Fitting() {
               </Card>
             );
           })}
-          <Card>
-
+          <Card
+            style={{
+              width: "150px",
+              height: "170px",
+              margin: "10px 20px",
+              boxShadow: "0px 0px 40px #0C207219",
+            }}
+          >
+            <Link to="/produtos"><ButtonMore>+</ButtonMore></Link>
           </Card>
         </ClothesList>
       </ClothesContainer>

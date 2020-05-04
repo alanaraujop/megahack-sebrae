@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   margin-top: 100px;
 `;
 
-export const ClothesContainer = styled.div`
+const ClothesContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,23 +15,45 @@ export const ClothesContainer = styled.div`
   max-width: 570px;
 `;
 
-export const ClothesList = styled.div`
+const ClothesList = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
 
-export const ImageClothe = styled.img`
+const ImageClothe = styled.img`
   height: 100%;
   width: auto;
 `;
 
-export const BodyContainer = styled.div`
+const BodyContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const Body = styled.img`
+const Body = styled.img`
   height: 500px;
   margin: 0 30px;
 `;
+
+const ButtonMore = styled.span`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #00000029;
+  font-size: 18px;
+  color: #9A9A9A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export {
+  Container,
+  ClothesContainer,
+  ClothesList,
+  ImageClothe,
+  BodyContainer,
+  Body,
+  ButtonMore
+}
