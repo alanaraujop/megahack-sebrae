@@ -6,6 +6,7 @@ import { Layout } from "../components/modules";
 import Home from "./Home";
 import Products from "./Products"
 import Profile from "./Profile/Profile";
+import Fitting from "./Fitting/Fitting";
 
 const Routes = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ const Routes = () => (
           <Route exact path="/" component={Home} />
           <Route exact path="/produtos" component={Products} />
           <Route exact path="/perfil" component={Profile} />
+          <Route exact path="/provador" component={Fitting} />
         </Layout>
       )}
     </Switch>
