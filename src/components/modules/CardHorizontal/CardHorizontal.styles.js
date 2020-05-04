@@ -14,10 +14,10 @@ const CardContainer = styled.div`
   box-shadow: ${(props) => props.theme.shadows[0]};
   justify-content: center;
   background-color: #fff;
-  /* :not(:first-child) {
-    border-top: solid #e8e8e8 2px;
-    margin-top: 20px;
-  } */
+  @media (max-width: 768px) {
+    height: 92px;
+    padding: 16px;
+  }
 `;
 
 const Row = styled.div`
@@ -28,9 +28,12 @@ const Row = styled.div`
 `;
 
 const ButtonDelete = styled.img.attrs({ src: icones.lixeira })`
-  height: 18px;
+  height: 13px;
   color: #9e9e9e;
   cursor: pointer;
+  @media (max-width: 768px) {
+    height: 13px;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -40,6 +43,9 @@ const InfoContainer = styled.div`
   justify-content: space-between;
   flex-direction: column;
   margin: 25px;
+  @media (max-width: 768px) {
+    margin: 0 0 0 12px;
+  }
 `;
 
 const ImageProduct = styled.img`
@@ -54,6 +60,9 @@ const Description = styled.p`
   letter-spacing: 2.4px;
   color: #b5b5b5;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 9px;
+  }
 `;
 
 const Price = styled.p`
@@ -61,6 +70,9 @@ const Price = styled.p`
   font: Light 20px/30px Poppins;
   letter-spacing: 2.4px;
   color: #b5b5b5;
+  @media (max-width: 768px) {
+    font-size: 9px;
+  }
 `;
 
 export {
