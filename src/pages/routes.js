@@ -6,6 +6,7 @@ import Home from "./Home";
 import Products from "./Products";
 import Cart from "./Cart";
 import Profile from "./Profile/Profile";
+import Fitting from "./Fitting/Fitting";
 
 const Routes = () => (
   <BrowserRouter>
@@ -16,6 +17,7 @@ const Routes = () => (
           <Route exact path="/produtos" component={Products} />
           <Route exact path="/carrinho" component={Cart} />
           <Route exact path="/perfil" component={Profile} />
+          <Route exact path="/provador" component={Fitting} />
         </Layout>
       )}
     </Switch>
