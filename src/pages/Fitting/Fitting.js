@@ -35,7 +35,6 @@ export default function Fitting() {
         </Typography>
         <ClothesList>
           {cart.map((item, key) => {
-            console.log(item);
             return (
               <Card
                 key={key}
@@ -58,7 +57,9 @@ export default function Fitting() {
               boxShadow: "0px 0px 40px #0C207219",
             }}
           >
-            <Link to="/produtos"><ButtonMore>+</ButtonMore></Link>
+            <Link to="/produtos">
+              <ButtonMore>+</ButtonMore>
+            </Link>
           </Card>
         </ClothesList>
       </ClothesContainer>

@@ -12,7 +12,7 @@ import { useMedia } from "../../../hooks/useMedia";
 const generateProductsList = (cart) =>
   cart.reduce(
     (acum, item, index) => `${acum}
-  *[ ${index} ]* - ${item.name} | *TAMANHO* - ${item.size}%0a`,
+  *[ ${index + 1} ]* - ${item.name} | *TAMANHO* - ${item.size}%0a`,
     ""
   );
 
@@ -27,8 +27,10 @@ export default function CartContent() {
   const text = `*PRODUTOS:*%0a
   -----------------%0a${generateProductsList(cart)}`;
   useEffect(() => {
-    dispatch(ActionsCart.insertItemCart(Products[0]));
+    dispatch(ActionsCart.insertItemCart(Products[2]));
     dispatch(ActionsCart.insertItemCart(Products[1]));
+    dispatch(ActionsCart.insertItemCart(Products[0]));
+    dispatch(ActionsCart.insertItemCart(Products[9]));
   }, []);
 
   const handleRemoveItemCart = (id) => {
