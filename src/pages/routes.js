@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import addThemeProvider from "../styles";
 import { Layout } from "../components/modules";
-import Home from "./Home";
+// import Home from "./Home";
 import Products from "./Products";
 import Cart from "./Cart";
 import Profile from "./Profile/Profile";

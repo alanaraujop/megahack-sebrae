@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import CardHorizontal from "../../modules/CardHorizontal";
@@ -7,7 +7,6 @@ import { formatMoney } from "../../../helpers";
 import { Button } from "../../elements";
 import { Content, CardContainer, Total, Row, MoreItems } from "./styles";
 import { useHistory } from "react-router-dom";
-import Products from "../../../mocks/Products";
 import { useMedia } from "../../../hooks/useMedia";
 import cartEmpty from "../../../assets/images/cabides.svg"
 import Typography from "../../elements/Typography/Typography";
@@ -29,12 +28,6 @@ export default function CartContent() {
   const whatsappNumber = "5521984623153";
   const text = `*PRODUTOS:*%0a
   -----------------%0a${generateProductsList(cart)}`;
-  // useEffect(() => {
-  //   dispatch(ActionsCart.insertItemCart(Products[2]));
-  //   dispatch(ActionsCart.insertItemCart(Products[1]));
-  //   dispatch(ActionsCart.insertItemCart(Products[0]));
-  //   dispatch(ActionsCart.insertItemCart(Products[9]));
-  // }, []);
 
   const handleRemoveItemCart = (id) => {
     dispatch(ActionsCart.removeItemCart(id));
