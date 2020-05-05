@@ -13,7 +13,7 @@ const Routes = () => (
     <Switch>
       {addThemeProvider(
         <Layout>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Profile} />
           <Route exact path="/produtos" component={Products} />
           <Route exact path="/carrinho" component={Cart} />
           <Route exact path="/perfil" component={Profile} />

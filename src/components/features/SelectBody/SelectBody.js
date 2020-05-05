@@ -3,6 +3,7 @@ import CarouselCard from "../../modules/CarouselCard";
 import Card from "../../elements/Card";
 import Button from "../../elements/Button";
 import { useMedia } from "../../../hooks/useMedia";
+import { Link } from "react-router-dom";
 
 export default function SelectBody({ bodys, setBodySelected }) {
   const [CarouselRef, setCarouselRef] = useState(null);
@@ -40,13 +41,15 @@ export default function SelectBody({ bodys, setBodySelected }) {
           </Card>
         ))}
       </CarouselCard>
-      <Button
-        action={() => setBodySelected(currentBody)}
-        width="140px"
-        style={{ boxShadow: "1px 1px 4px #00000075" }}
-      >
-        ESCOLHER
-      </Button>
+      <Link to="/produtos">
+        <Button
+          action={() => setBodySelected(currentBody)}
+          width="140px"
+          style={{ boxShadow: "1px 1px 4px #00000075" }}
+        >
+          ESCOLHER
+        </Button>
+      </Link>
     </>
   );
 }
