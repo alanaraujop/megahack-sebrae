@@ -9,6 +9,9 @@ import { Content, CardContainer, Total, Row, MoreItems } from "./styles";
 import { useHistory } from "react-router-dom";
 import Products from "../../../mocks/Products";
 import { useMedia } from "../../../hooks/useMedia";
+import cartEmpty from "../../../assets/images/cabides.svg"
+import Typography from "../../elements/Typography/Typography";
+
 const generateProductsList = (cart) =>
   cart.reduce(
     (acum, item, index) => `${acum}
@@ -26,12 +29,12 @@ export default function CartContent() {
   const whatsappNumber = "5521984623153";
   const text = `*PRODUTOS:*%0a
   -----------------%0a${generateProductsList(cart)}`;
-  useEffect(() => {
-    dispatch(ActionsCart.insertItemCart(Products[2]));
-    dispatch(ActionsCart.insertItemCart(Products[1]));
-    dispatch(ActionsCart.insertItemCart(Products[0]));
-    dispatch(ActionsCart.insertItemCart(Products[9]));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(ActionsCart.insertItemCart(Products[2]));
+  //   dispatch(ActionsCart.insertItemCart(Products[1]));
+  //   dispatch(ActionsCart.insertItemCart(Products[0]));
+  //   dispatch(ActionsCart.insertItemCart(Products[9]));
+  // }, []);
 
   const handleRemoveItemCart = (id) => {
     dispatch(ActionsCart.removeItemCart(id));
@@ -64,7 +67,7 @@ export default function CartContent() {
           />
         </CardContainer>
       ))}
-      {cart.length > 0 && (
+      {cart.length > 0 ? (
         <>
           <Row>
             <Total>TOTAL DO PEDIDO</Total>
@@ -77,14 +80,32 @@ export default function CartContent() {
             action={closeOrder}
             style={{
               margin: "20px 0",
-              height: !isSmall ? "83px" : "47px",
-              maxWidth: "396px",
+              height: !isSmall ? "70px" : "47px",
+              maxWidth: "350px",
               width: "80%",
               borderRadius: "42px",
-              fontSize: !isSmall ? "25px" : "13px",
+              fontSize: !isSmall ? "18px" : "13px",
             }}
           >
             FECHAR PEDIDO
+          </Button>
+        </>
+      ) : (
+        <>
+          <img src={cartEmpty} alt="carrinho vazio" height="300px"/>
+          <Typography color="#B5B5B5" style={{marginTop: "20px"}}>VOCÊ NÃO TEM PEÇAS NO CARRINHO !</Typography>
+          <Button
+            action={() => history.push("/produtos")}
+            style={{
+              margin: "20px 0",
+              height: !isSmall ? "70px" : "47px",
+              maxWidth: "350px",
+              width: "80%",
+              borderRadius: "42px",
+              fontSize: !isSmall ? "18px" : "13px",
+            }}
+          >
+            VOLTAR AO MOSTRUÁRIO
           </Button>
         </>
       )}
