@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Header = styled.header`
+  z-index: 10;
   position: relative;
   display: flex;
   justify-content: center;
