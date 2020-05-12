@@ -3,12 +3,13 @@
 </p>
 
 <h3 align="center">
-  Melhorando experiências de
+  pequena descrição
 </h3>
 
 <br>
 
 <div align="center">
+
 
 ## Sobre o Projeto
 
@@ -17,6 +18,7 @@ A [VivaVitrine](url), surgiu buscando ser uma plataforma de exposição com intu
 Em pesquisa realizada pela equipe envolvida no desenvolvimento do projeto, cerca de 80% das pessoas não costumam fazer compras de roupas pela internet devido a dificuldade em acertar o tamanho e o modelo ideal. O setor varejista, que movimentou mais de 200 bilhões de reais em 2018, é o que mais está sofrendo os impactos econômicos, levando em conta que mais de 70% de lojas desse segmento encontra-se parcialmente ou totalmente fechada.
 
 O intuito da plataforma é fornecer um meio de venda sustentável ao lojista permitindo que ele exponha suas peças para seus clientes de maneira organizada, intuitiva, e atrativo ao cliente final, onde pode ser feita a escolha das peças que mais combinam com o seu formato de corpo e cor de pele, além de permitir que teste as peças em uma simulação digital, tornando a escolha das peças mais assertivas na hora da compra. A [VivaVitrine](url) mantém o contato entre o cliente e o vendedor vivo, tirando o formato impessoal de compra dos e-comerces, permitindo uma compra humanizada preservando o contato cliente/vendedor das compras físicas.
+
 
 ## Scripts
 
