@@ -9,7 +9,7 @@
 <br>
 
 
-## Sobre o Projeto
+## Sobre o Projeto :green_book:
 
 A [VivaVitrine](url), surgiu buscando ser uma plataforma de exposição com intuito de sanar a dificuldade que pequenas lojas tem para apresentar os produtos durante a quarentena, e a solução que muitos encontram são as vendas pelos meios digitais como redes sociais e aplicativos de mensagens, embora esses modelos de venda sejam comuns para o pequeno comerciante a exposição torna-se uma operação engessada e a solução para melhor gerenciar e oferecer uma boa experiência para o cliente, é a criação de um e-commerce, que pode ser custoso e pouco acessível.
 
@@ -18,7 +18,7 @@ Em pesquisa realizada pela equipe envolvida no desenvolvimento do projeto, cerca
 O intuito da plataforma é fornecer um meio de venda sustentável ao lojista permitindo que ele exponha suas peças para seus clientes de maneira organizada, intuitiva, e atrativo ao cliente final, onde pode ser feita a escolha das peças que mais combinam com o seu formato de corpo e cor de pele, além de permitir que teste as peças em uma simulação digital, tornando a escolha das peças mais assertivas na hora da compra. A [VivaVitrine](url) mantém o contato entre o cliente e o vendedor vivo, tirando o formato impessoal de compra dos e-comerces, permitindo uma compra humanizada preservando o contato cliente/vendedor das compras físicas.
 
 
-## Scripts
+## Scripts :pushpin: :computer:
 
 > Obs: ao rodar o projeto pela primeira vez, execute `yarn` para instalar todas as dependências.
 
