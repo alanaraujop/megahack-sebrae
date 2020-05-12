@@ -3,12 +3,10 @@
 </p>
 
 <h3 align="center">
-  pequena descrição
+  ...
 </h3>
 
 <br>
-
-<div align="center">
 
 
 ## Sobre o Projeto
@@ -25,6 +23,6 @@ O intuito da plataforma é fornecer um meio de venda sustentável ao lojista per
 > Obs: ao rodar o projeto pela primeira vez, execute `yarn` para instalar todas as dependências.
 
 |Pincipais ||
-|:----------:|-------------|
+|----------|-------------|
 |`yarn start`|executa o aplicativo em modo de desenvolvimento. abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 |`yarn build`|cria o aplicativo para produção na pasta `build` |
