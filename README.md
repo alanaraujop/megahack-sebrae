@@ -27,4 +27,4 @@ O intuito da plataforma é fornecer um meio de venda sustentável ao lojista per
 |Pincipais ||
 |:----------:|-------------|
 |`yarn start`|executa o aplicativo em modo de desenvolvimento. abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
-|`yarn build`|cria o aplicativo para produção na pasta `build` | $1600 |
+|`yarn build`|cria o aplicativo para produção na pasta `build` |
